@@ -36,7 +36,7 @@ web/sites/simpletest
 web/sites/*/files/
 web/sites/default/*/files
 web/modules/contrib/
-web/themes/contrib/
+# web/themes/contrib/
 web/themes/adaptivetheme
 web/core/
 web/modules/file_replace
