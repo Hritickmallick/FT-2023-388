@@ -1,6 +1,6 @@
 uuid: 6ef59c08-0118-4eca-a512-ea033caacfa2
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.main
@@ -12,8 +12,8 @@ _core:
   default_config_hash: Fm7sDs2U1u99MaVOZEZqa-QOJrrUiQMWJb1jMozYO48
 id: custom_theme_main_navigation
 theme: custom_theme
-region: nav_branding
-weight: -6
+region: header
+weight: -5
 provider: null
 plugin: 'system_menu_block:main'
 settings:
