@@ -10,7 +10,7 @@ _core:
   default_config_hash: nuW1Z5MdvzbCCEZ9RQojaEWB6Zni32zTq-v5OWbS2sc
 id: custom_theme_branding
 theme: custom_theme
-region: sidebar_first
+region: header
 weight: -6
 provider: null
 plugin: system_branding_block
@@ -19,7 +19,7 @@ settings:
   label: 'Site branding'
   label_display: '0'
   provider: system
-  use_site_logo: true
+  use_site_logo: false
   use_site_name: true
   use_site_slogan: false
 visibility: {  }

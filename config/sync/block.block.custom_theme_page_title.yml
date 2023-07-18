@@ -8,7 +8,7 @@ _core:
   default_config_hash: qYppfxaWSy6BwGNKdMch1PeUA24PlRTt39jQft6A6Kg
 id: custom_theme_page_title
 theme: custom_theme
-region: content
+region: nav_additional
 weight: -6
 provider: null
 plugin: page_title_block

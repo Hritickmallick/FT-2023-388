@@ -10,7 +10,7 @@ _core:
   default_config_hash: S0Y16qIQfKiOEzWlddOGk3u_BKwAruAheA8VVFfGbLc
 id: custom_theme_help
 theme: custom_theme
-region: content
+region: help
 weight: -3
 provider: null
 plugin: help_block

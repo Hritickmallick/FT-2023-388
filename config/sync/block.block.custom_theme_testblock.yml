@@ -11,7 +11,7 @@ dependencies:
 id: custom_theme_testblock
 theme: custom_theme
 region: sidebar_first
-weight: 0
+weight: -6
 provider: null
 plugin: 'block_content:468f9ff3-7bfe-4c06-a5b0-3670c3fa3244'
 settings:

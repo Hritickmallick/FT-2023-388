@@ -8,7 +8,7 @@ _core:
   default_config_hash: yX9o6NcntZnXRDfbJoHY1pJwuXlumW44m5AMs347NN4
 id: custom_theme_local_tasks
 theme: custom_theme
-region: content
+region: help
 weight: -4
 provider: null
 plugin: local_tasks_block
