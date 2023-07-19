@@ -3,3 +3,4 @@ global-styling:
  css:
    theme: 
      css/index.css: {}
+     css/article.css: {}
