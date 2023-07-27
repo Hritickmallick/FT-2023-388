@@ -1,0 +1,67 @@
+@use '../partial_files/importers' as *;
+
+header{
+padding-top: 20px;
+position: fixed;
+z-index: 2;
+width: 100%;
+
+&::after{
+    content: " ";
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    margin-top: 20px;
+}
+
+.region-navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar-brand a.site-title {
+    color: $logo;
+}
+
+.navbar-brand a.site-title:hover {
+    color: $logo;
+}
+
+.navbar-nav {
+    flex-direction: row;
+
+    li {
+
+        a {
+            color: #fff;
+
+            &:hover {
+                color: $logo;
+            }
+        }
+    }
+}
+
+.form-search {
+    background: transparent;
+    border: none;
+    margin-top: 5px;
+}
+
+.form-actions {
+    position: relative;
+
+    i {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        padding: 18px 10px;
+        background-color: #221f1f;
+        border-radius: 50%;
+        color: $logo;
+
+    }
+}
+}

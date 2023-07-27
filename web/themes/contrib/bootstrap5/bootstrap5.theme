@@ -67,6 +67,7 @@ function bootstrap5_preprocess_html(&$variables) {
  * Implements theme_preprocess_page().
  */
 function bootstrap5_preprocess_page(&$variables) {
+ 
   // Pass variables to theme.
   $variables['b5_top_container'] = theme_get_setting('b5_top_container');
   // Navbar colour theme.
@@ -75,7 +76,6 @@ function bootstrap5_preprocess_page(&$variables) {
   // Footer colour theme.
   $variables['b5_footer_schema'] = theme_get_setting('b5_footer_schema');
   $variables['b5_footer_bg_schema'] = theme_get_setting('b5_footer_bg_schema');
-
 }
 
 /**
@@ -338,7 +338,7 @@ function bootstrap5_preprocess_block(&$variables) {
         $variables['content']['#attributes']['data-block']['region'] = $region;
       }
     }
-  }
+  } 
 }
 
 /**

@@ -1,3 +1,3 @@
-body{
-    background-color: #fff;
-}
+@use '../scss/base/elements';
+@use '../scss/component/header';
+@use '../scss/component/banner';
