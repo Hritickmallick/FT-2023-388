@@ -1,6 +1,6 @@
 uuid: 41fb6e89-5e67-4483-8c02-1391076e9c69
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - custom_theme
@@ -8,8 +8,8 @@ _core:
   default_config_hash: MBqG1B5mr5-fPSCDyTR6z2zVTRxZ10XeS_pAw6C7za4
 id: custom_theme_local_actions
 theme: custom_theme
-region: help
-weight: -2
+region: header
+weight: 0
 provider: null
 plugin: local_actions_block
 settings:

@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Theme override for an 'input' #type form element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ *
+ * @see template_preprocess_input()
+ */
+#}
+{{ attach_library ('custom_theme/fontawesome')}}
+{{ attach_library ('custom_theme/movie-page-styling') }}
+
+{% if attributes.hasClass('button') and not attributes.hasClass('field-add-more-submit') %}
+  {%
+    set classes = [
+      'btn',
+      
+      attributes.hasClass('button--danger') ? 'btn-danger' : '',
+      (not attributes.hasClass('media-library-item__remove') and not attributes.hasClass('button--danger')) ? 'btn-primary' : ''
+    ]
+  %}
+  {# <input {{ attributes.addClass(classes) }}></input> #}
+  <i class="fa-solid fa-magnifying-glass fa-lg btn" {{ attributes.addClass(classes) }}></i>
+{% else %}
+  <input{{ attributes }} />
+{% endif %}
+{{ children }}

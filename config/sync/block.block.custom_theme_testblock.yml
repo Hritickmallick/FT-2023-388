@@ -10,8 +10,8 @@ dependencies:
     - custom_theme
 id: custom_theme_testblock
 theme: custom_theme
-region: sidebar_first
-weight: -6
+region: sub_content
+weight: -5
 provider: null
 plugin: 'block_content:468f9ff3-7bfe-4c06-a5b0-3670c3fa3244'
 settings:

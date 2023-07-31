@@ -1,0 +1,13 @@
+name: custom theme
+description: 'creating a sub theme and the base theme is bootstrap5'
+type: theme
+core_version_requirement: ^10
+base theme: bootstrap5
+
+libraries:
+  - custom_theme/global-styling 
+
+regions:
+  navigation: 'Navigation'
+  maincontent: 'Main Content'
+  footer: 'Footer'

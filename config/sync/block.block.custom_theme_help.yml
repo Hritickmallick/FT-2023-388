@@ -1,6 +1,6 @@
 uuid: 22dda659-3b9e-4b30-9ca4-540edc8d8fe1
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - help
@@ -10,8 +10,8 @@ _core:
   default_config_hash: S0Y16qIQfKiOEzWlddOGk3u_BKwAruAheA8VVFfGbLc
 id: custom_theme_help
 theme: custom_theme
-region: help
-weight: -3
+region: header
+weight: -1
 provider: null
 plugin: help_block
 settings:

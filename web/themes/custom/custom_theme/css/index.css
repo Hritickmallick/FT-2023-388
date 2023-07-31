@@ -1,0 +1,112 @@
+body {
+  background-color: #0f1219;
+  overflow-x: hidden;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  padding-top: 20px;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+header::after {
+  content: " ";
+  height: 1px;
+  width: 100%;
+  background-color: #fff;
+  display: block;
+  margin-top: 20px;
+}
+header .region-navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header .navbar-brand a.site-title {
+  color: #10c8b2;
+}
+header .navbar-brand a.site-title:hover {
+  color: #10c8b2;
+}
+header .navbar-nav {
+  flex-direction: row;
+}
+header .navbar-nav li a {
+  color: #fff;
+}
+header .navbar-nav li a:hover {
+  color: #10c8b2;
+}
+header .form-search {
+  background: transparent;
+  border: none;
+  margin-top: 5px;
+}
+header .form-actions {
+  position: relative;
+}
+header .form-actions i {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 18px 10px;
+  background-color: #221f1f;
+  border-radius: 50%;
+  color: #10c8b2;
+}
+
+.cover-banner .container-fluid .slick-slider .slick-arrow {
+  border-radius: 20%;
+  width: 40px;
+  height: 40px;
+}
+.cover-banner .container-fluid .slick-slider .slick-arrow::before {
+  color: #10c8b2;
+  font-size: 30px;
+}
+.cover-banner .container-fluid .slick-slider .slick-prev {
+  top: 106%;
+  left: 40%;
+  background-color: #221f1f;
+}
+.cover-banner .container-fluid .slick-slider .slick-next {
+  top: 106%;
+  right: 40%;
+  background: #221f1f;
+}
+.cover-banner .container-fluid .slick-slider .slick-list .slick-track .slick-slide .views-field .field-content {
+  padding: 0px;
+}
+
+.region-content {
+  padding: 0px;
+}
+
+.container-fluid {
+  padding: 0px;
+}
+
+.views-field-title {
+  text-align: center;
+}
+.views-field-title .field-content a {
+  color: gray;
+}
+
+.views-field-field-movie-banner .field-content {
+  padding: 0px 5px;
+}
+.views-field-field-movie-banner .field-content .banner-img {
+  width: 100%;
+}
+
+.movie-card {
+  position: absolute;
+  top: 80px;
+  width: 100%;
+}/*# sourceMappingURL=index.css.map */
