@@ -4,8 +4,8 @@ type: theme
 core_version_requirement: ^10
 base theme: bootstrap5
 
-libraries:
-  - custom_theme/global-styling 
+# libraries:
+#   - custom_theme/global-styling 
 
 regions:
   navigation: 'Navigation'
