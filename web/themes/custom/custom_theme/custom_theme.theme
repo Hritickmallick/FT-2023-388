@@ -1,0 +1,120 @@
+<?php
+
+// implementing HOOK_library_info_alter
+// this function is for defining css libraries
+// global-styling is used for entire site and nodestyle is specific for article content type
+
+function custom_theme_library_info_alter(array &$libraries)
+{
+    $libraries['nodestyle'] = array(
+        'css' => array(
+            'theme' => array(
+                'css/node.css' => array(),
+            ),
+        ),
+    );
+
+
+    $libraries['global-styling'] = array(
+        'css' => array(
+            'theme' => array(
+                'css/global.css' => array(),
+            ),
+        ),
+
+        'js' => array(
+            'js/global.js' => array(),
+        ),
+    );
+}
+
+
+// hook_preprocess_page implementing 
+// this function is for every templates
+
+function custom_theme_preprocess_page(&$variables)
+{
+    // Attach the 'custom-styles' library to the page.
+
+
+    $variables['#attached']['library'][] = 'custom_theme/nodestyle';
+
+    if (\Drupal::routeMatch()->getRouteName() == 'custom_module.content') {
+
+        $variables['color'] = 'red';
+    }
+}
+
+
+// implementing HOOK_preprocess_hook function 
+
+function custom_theme_preprocess_node(&$variables, &$suggestions, $hook)
+{
+
+    // added css stylesheet for a particular content type
+    $page = $variables['node'];
+    if ($page->gettype() === 'article') {
+
+        $variables['#attached']['library'][] = 'custom_theme/nodestyle';
+    }
+
+    // added class for particular content type
+
+    if (\Drupal::routeMatch()->getRouteName() == 'entity.node.canonical') {
+        $node = \Drupal::routeMatch()->getParameter('node');
+        // Add a custom class based on the node type.
+        $variables['attributes']['class'][] = 'custom-' . $node->getType();
+    }
+
+    $variables['color'] = 'red';
+
+    //  dd($variables);
+}
+
+
+// implementing a custom class for the body tag for the particular page.
+
+function custom_theme_preprocess_html(&$variables)
+{
+
+
+    if (\Drupal::routeMatch()->getRouteName() == 'view.front.page_1') {
+        // Add a custom class to the <body> element.
+        $variables['attributes']['class'][] = 'my-custom-class';
+    }
+
+    if (\Drupal::routeMatch()->getRouteName() == 'custom_module.content') {
+
+        $variables['attributes']['class'][] = 'hello';
+    }
+
+    $node = \Drupal::routeMatch()->getParameter('node');
+    $page = $node->id();
+    
+    if($page === '4'){
+        $variables['attributes']['class'][] = 'node-id-attached';
+    }
+
+      
+    
+}
+
+//implementing hook_theme_suggestions_HOOK() function
+
+
+function custom_theme_theme_suggestions_alter(array &$suggestions, array $variables, $hook)
+{
+    if (\Drupal::routeMatch()->getRouteName() == 'custom_module.content') {
+        if ($hook == 'page') {
+            $suggestions[] = 'page__custom_render';
+        }
+    }
+    $node = \Drupal::routeMatch()->getParameter('node');
+    $page = $node->id();
+    if ($page === '4') {
+        if ($hook == 'node') {
+            $suggestions[] = 'node__custom_path';
+        }
+    }
+    
+}

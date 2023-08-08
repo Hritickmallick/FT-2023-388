@@ -1,0 +1,7 @@
+name: 'Custom Module'
+type: module
+description: 'created for a page'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - node
